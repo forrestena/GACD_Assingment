@@ -67,3 +67,4 @@ head(tidydata[,c(1:4)])
 tail(tidydata[,c(1:4)])
 
 ##5_From the data set in step 4, creates a second, independent tidy data set
+## with the average of each variable for each activity and each subject.
