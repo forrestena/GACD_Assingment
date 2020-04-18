@@ -60,11 +60,26 @@ names(mergedx)<-names
 names(mergedsubject)<-"subjectnumber"
 names(mergedy)<-"activities"
 
-tidydata<-cbind(mergedsubject, mergedy, mergedx)
+labeleddata<-cbind(mergedsubject, mergedy, mergedx)
+
+a<-labeleddata
 
 ##this could output the head 5 colums and ending 5 colums
-head(tidydata[,c(1:4)])
-tail(tidydata[,c(1:4)])
+head(labeleddata[,c(1:4)])
+tail(labeleddata[,c(1:4)])
 
 ##5_From the data set in step 4, creates a second, independent tidy data set
 ## with the average of each variable for each activity and each subject.
+require(data.table)
+outputdata<- data.table(a)
+
+finaloutput <- outputdata[, lapply(.SD, mean), by = 'subjectnumber,activities']
+##output the dim
+dim(finaloutput)
+
+##for output
+
+write.table(finaloutput, file = "finaloutput.txt", row.names = FALSE)
+
+##this could output the head 5
+head(finaloutput[order(subjectnumber)][,c(1:4), with = FALSE],5) 
