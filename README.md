@@ -1,9 +1,11 @@
 # GACD_Assingment
 
 
-The assignment of course "getting and cleaning data"
+The assignment of course "GACD0420"  
 
-Below were the project requirement which copied from the coursera Getting and Cleaning data Course project: 
+THIS IS FULL NON-PROFIT/NON-COMMERCIAL ASSINGMENT.
+
+Below were the course assessment requirement which copied from the Course project page: 
 
 (the course was provided by John Hopkins University)
 
