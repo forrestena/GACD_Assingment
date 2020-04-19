@@ -77,6 +77,11 @@ finaloutput <- outputdata[, lapply(.SD, mean), by = 'subjectnumber,activities']
 ##output the dim
 dim(finaloutput)
 
+##cleaning data
+
+finaloutput <- na.omit(finaloutput) 
+finaloutput <- finaloutput[,-c(69:563)]
+
 ##for output
 
 write.table(finaloutput, file = "finaloutput.txt", row.names = FALSE)
